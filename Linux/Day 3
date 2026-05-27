@@ -1,0 +1,136 @@
+# Day 3 Learning - Cyber Security Journey
+
+## Topics Learned
+
+### Python for Security Automation
+- File Handling
+- Reading Log Files
+- Counting Failed Login Attempts
+- Regular Expressions
+- Log Analysis Basics
+
+---
+
+## Python Programs Practiced
+
+### Log Analyzer
+```python
+with open("security.log", "r") as file:
+    count = 0
+
+    for line in file:
+        if "error" in line.lower():
+            count += 1
+
+print("Errors Found:", count)
+```
+
+### IP Address Extractor
+```python
+import re
+
+text = "User connected from 192.168.1.10"
+
+ips = re.findall(r"\d+\.\d+\.\d+\.\d+", text)
+
+print(ips)
+```
+
+### Port List Generator
+```python
+ports = {
+    22: "SSH",
+    53: "DNS",
+    80: "HTTP",
+    443: "HTTPS"
+}
+
+for port, service in ports.items():
+    print(port, service)
+```
+
+---
+
+# Nmap Basics
+
+## Commands Practiced
+
+### Scan a Host
+```bash
+nmap 192.168.1.1
+```
+
+### Scan Specific Ports
+```bash
+nmap -p 22,80,443 192.168.1.1
+```
+
+### Service Detection
+```bash
+nmap -sV 192.168.1.1
+```
+
+### OS Detection
+```bash
+sudo nmap -O 192.168.1.1
+```
+
+---
+
+# Wireshark Basics
+
+## Learned Concepts
+- Packet Capture
+- Source IP
+- Destination IP
+- Protocol Analysis
+- DNS Traffic
+- TCP Traffic
+
+## Filters Used
+
+### HTTP
+```text
+http
+```
+
+### DNS
+```text
+dns
+```
+
+### TCP
+```text
+tcp
+```
+
+### ICMP
+```text
+icmp
+```
+
+---
+
+# Skills Gained
+- Python Automation
+- Log Analysis
+- Nmap Scanning
+- Wireshark Packet Analysis
+- Network Monitoring Basics
+
+---
+
+# Mini Projects Completed
+1. Log Analyzer
+2. IP Address Extractor
+3. Port List Generator
+
+---
+
+# Goal
+Become a SOC Analyst / Cyber Security Analyst by building strong practical skills in:
+- Linux
+- Networking
+- Python
+- Security Tools
+- Threat Detection
