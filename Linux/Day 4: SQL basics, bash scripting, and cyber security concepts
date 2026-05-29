@@ -1,0 +1,186 @@
+# Day 4 Learning - SQL, Bash Scripting & Cyber Security Concepts
+
+## SQL Basics
+
+### Topics Learned
+- CREATE DATABASE
+- CREATE TABLE
+- INSERT INTO
+- SELECT
+- UPDATE
+- DELETE
+- WHERE Clause
+
+---
+
+## SQL Queries Practiced
+
+### Create Database
+```sql
+CREATE DATABASE cyberlab;
+```
+
+### Create Table
+```sql
+CREATE TABLE students (
+    id INT,
+    name VARCHAR(50),
+    course VARCHAR(50)
+);
+```
+
+### Insert Data
+```sql
+INSERT INTO students VALUES
+(1, 'Sreeja', 'Cyber Security'),
+(2, 'Rahul', 'Networking');
+```
+
+### View Data
+```sql
+SELECT * FROM students;
+```
+
+### Filter Data
+```sql
+SELECT * FROM students
+WHERE course='Cyber Security';
+```
+
+### Update Data
+```sql
+UPDATE students
+SET course='SOC Analyst'
+WHERE id=1;
+```
+
+### Delete Data
+```sql
+DELETE FROM students
+WHERE id=2;
+```
+
+---
+
+# Bash Scripting
+
+## Topics Learned
+- Shell Scripts
+- Variables
+- User Input
+- Conditions
+- chmod
+
+---
+
+## Bash Programs Practiced
+
+### Hello Script
+```bash
+#!/bin/bash
+
+echo "Welcome Sreeja"
+```
+
+### Variables
+```bash
+#!/bin/bash
+
+name="Sreeja"
+
+echo $name
+```
+
+### User Input
+```bash
+#!/bin/bash
+
+echo "Enter Name:"
+read name
+
+echo "Welcome $name"
+```
+
+### Conditions
+```bash
+#!/bin/bash
+
+num=10
+
+if [ $num -gt 5 ]
+then
+    echo "Greater"
+fi
+```
+
+---
+
+# Cyber Security Concepts
+
+## CIA Triad
+
+### Confidentiality
+Protecting data from unauthorized access.
+
+### Integrity
+Ensuring data is not modified.
+
+### Availability
+Systems should remain accessible.
+
+---
+
+# Types of Hackers
+
+| Type | Meaning |
+|------|----------|
+| White Hat | Ethical Hacker |
+| Black Hat | Malicious Hacker |
+| Grey Hat | Between ethical & malicious |
+
+---
+
+# Malware Types
+- Virus
+- Worm
+- Trojan
+- Ransomware
+- Spyware
+
+---
+
+# Phishing
+Fake emails/websites used to steal:
+- Passwords
+- Banking details
+- Personal Information
+
+---
+
+# Brute Force Attack
+Trying multiple passwords until the correct one is found.
+
+---
+
+# Mini Projects Completed
+
+1. Student Database Query
+2. Bash Login Script
+3. Password Strength Checker
+
+---
+
+# Skills Gained
+- SQL Querying
+- Bash Scripting
+- Linux Automation
+- Cyber Security Fundamentals
+- Database Operations
+
+---
+
+# Goal
+Build strong practical skills for:
+- SOC Analyst
+- Cyber Security Analyst
+- Security Operations
