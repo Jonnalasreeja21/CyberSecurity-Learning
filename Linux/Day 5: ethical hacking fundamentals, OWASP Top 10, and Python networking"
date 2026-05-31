@@ -1,0 +1,182 @@
+# Day 5 Learning - Ethical Hacking, OWASP Top 10 & Python Networking
+
+## Ethical Hacking Fundamentals
+
+### What is Ethical Hacking?
+
+Ethical hacking is the authorized process of identifying vulnerabilities in systems, networks, or applications to improve security and prevent cyber attacks.
+
+---
+
+## Phases of Ethical Hacking
+
+### 1. Reconnaissance
+Gathering information about the target.
+
+### 2. Scanning
+Identifying open ports, services, and vulnerabilities.
+
+### 3. Enumeration
+Extracting detailed information from systems.
+
+### 4. Exploitation
+Testing vulnerabilities to determine risk.
+
+### 5. Reporting
+Documenting findings and remediation steps.
+
+---
+
+## Footprinting Commands
+
+### Ping
+
+```bash
+ping google.com
+```
+
+### DNS Lookup
+
+```bash
+nslookup google.com
+```
+
+### WHOIS Lookup
+
+```bash
+whois google.com
+```
+
+---
+
+# OWASP Top 10
+
+## What is OWASP?
+
+OWASP (Open Web Application Security Project) provides awareness about common web application vulnerabilities.
+
+---
+
+## Important Vulnerabilities
+
+### SQL Injection (SQLi)
+
+Attackers inject malicious SQL queries into application inputs.
+
+Example:
+
+```sql
+' OR '1'='1
+```
+
+Prevention:
+- Prepared Statements
+- Parameterized Queries
+- Input Validation
+
+---
+
+### Cross-Site Scripting (XSS)
+
+Attackers inject malicious JavaScript into web pages.
+
+Example:
+
+```html
+<script>alert("Hacked")</script>
+```
+
+Prevention:
+- Input Sanitization
+- Output Encoding
+- Content Security Policy (CSP)
+
+---
+
+### Broken Authentication
+
+Weak authentication mechanisms allow attackers to gain unauthorized access.
+
+---
+
+### Security Misconfiguration
+
+Improper security settings expose systems to attacks.
+
+---
+
+### Broken Access Control
+
+Users gain access to resources they should not be allowed to access.
+
+---
+
+# Python Networking
+
+## Socket Programming
+
+Python's socket module enables network communication.
+
+---
+
+## Get Local IP Address
+
+```python
+import socket
+
+host = socket.gethostname()
+ip = socket.gethostbyname(host)
+
+print(ip)
+```
+
+---
+
+## Basic Port Scanner
+
+```python
+import socket
+
+target = "127.0.0.1"
+
+for port in range(1,100):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+    result = s.connect_ex((target, port))
+
+    if result == 0:
+        print("Port Open:", port)
+
+    s.close()
+```
+
+---
+
+## Skills Gained
+
+- Ethical Hacking Fundamentals
+- Reconnaissance Techniques
+- OWASP Top 10 Awareness
+- SQL Injection Concepts
+- XSS Concepts
+- Python Socket Programming
+- Basic Port Scanning
+
+---
+
+# Mini Projects Completed
+
+1. Simple Port Scanner
+2. Login Authentication Simulator
+3. OWASP Security Notes
+
+---
+
+# Goal
+
+Build strong Cyber Security fundamentals for:
+
+- SOC Analyst
+- Cyber Security Analyst
+- Penetration Testing Intern
+- Security Operations Center (SOC)
